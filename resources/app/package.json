@@ -1,0 +1,59 @@
+{
+  "name": "twilioquest",
+  "//version": "The first major number for the launcher is the actual release version - increment it by one for each new launcher release.",
+  "version": "8.0.0",
+  "productName": "TwilioQuest",
+  "description": "TwilioQuest: Discover your power to change the world with code.",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm-run-all build:all --parallel electron:run watch:all",
+    "electron:run": "electron .",
+    "electron:mac": "electron-packager . TwilioQuest --icon build/mac.icns --out dist --overwrite --osx-sign",
+    "electron:win": "electron-packager . TwilioQuest --icon build/icon.ico --out dist --overwrite",
+    "electron:winstaller": "electron-builder --prepackaged dist/TwilioQuest-win32-x64",
+    "electron:win:all": "npm-run-all electron:win electron:winstaller",
+    "electron:linux": "electron-packager . TwilioQuest --executable-name twilioquest --icon build/icon.png --out dist --overwrite",
+    "electron:linux:distribute": "electron-installer-debian --src dist/TwilioQuest-linux-x64/ --dest dist/installers/ --arch amd64 --icon build/icon.png",
+    "electron:linux:all": "npm-run-all electron:linux electron:linux:distribute",
+    "build:all": "npm-run-all --parallel build:js build:css build:html",
+    "build:js": "babel src/js -d public",
+    "build:css": "node-sass src/scss/main.scss public/index.css",
+    "build:html": "pug src/templates/index.pug -o public -P",
+    "watch:all": "npm-run-all --parallel watch:js watch:css watch:html",
+    "watch:js": "babel src/js -d public --watch --source-maps",
+    "watch:css": "node-sass src/scss/main.scss public/index.css -w -r",
+    "watch:html": "pug src/templates/index.pug -o public -P -w"
+  },
+  "keywords": [],
+  "author": "Twilio DevEd",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "electron": "^6.0.3",
+    "electron-builder": "^20.39.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-packager": "^14.0.4",
+    "electron-winstaller": "^3.0.4",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "optionalDependencies": {
+    "electron-installer-debian": "^1.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.2",
+    "@babel/runtime-corejs2": "^7.4.2",
+    "electron-context-menu": "^0.11.0",
+    "electron-dl": "^1.13.0",
+    "electron-is-dev": "^1.0.1",
+    "fs-jetpack": "^2.2.2",
+    "md5-file": "^4.0.0",
+    "tar": "^4.4.10"
+  }
+}

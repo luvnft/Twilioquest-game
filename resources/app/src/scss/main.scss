@@ -1,0 +1,57 @@
+@import 'fonts';
+@import 'globals';
+
+html, body {
+  font-family: $base-font-stack;
+  background: transparent;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, button {
+  font-family: $game-font-stack;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+button.link {
+  background: none;
+  color: inherit;
+  border: none; 
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  margin-left: 10px;
+  text-decoration: underline;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.swal2-container {
+  z-index: 9999999 !important;
+
+  .swal2-popup {
+    background-color: $dark-bg !important;
+  }
+
+  .swal2-title, .swal2-content {
+    color: $white !important;
+    line-height: 1.4em !important;
+  }
+
+  .swal2-confirm {
+    background-color: #787878 !important;
+  }
+}
+
+// React component styles
+@import 'components/App';
+@import 'components/RemoteContent';
+@import 'components/LauncherControls';
+@import 'components/LaunchButton';
+@import 'components/VersionChooser';

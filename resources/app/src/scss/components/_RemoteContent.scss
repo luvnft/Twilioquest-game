@@ -1,0 +1,41 @@
+.RemoteContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: $launcher-controls-height + 15;
+  background-color: $dark-bg;
+  color: $white;
+  z-index: 9999;
+
+  .localMessage {
+    padding: 0;
+    height: 100%;
+    margin: 0 20px;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .launcherPrompt {
+    position: absolute;
+    top:0;
+    left: 50%;
+    width: 380px;
+    margin: 10px 0 0 -220px;
+    padding: 30px;
+    background-color: $dark-bg;
+    color: $white;
+    border: 4px solid #ffe000;
+    text-align: center;
+
+    a, a:visited {
+      display: block;
+      margin-top: 10px;
+      color: #ffe000;
+    }
+  }
+}

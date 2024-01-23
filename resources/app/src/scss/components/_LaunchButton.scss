@@ -1,0 +1,41 @@
+.LaunchButton {
+  margin-bottom: 10px;
+
+  .bigButton {
+    margin-top: 20px;
+    cursor: pointer;
+    height: 72px;
+    border: 20px solid transparent;
+    background-color: transparent;
+    border-image: url(img/button-up.png) 35 fill;
+    color: $white;
+    font-size: 24px;
+    outline: none;
+
+    &:active {
+      outline: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &:enabled {
+      &:hover {
+        opacity: 0.95;
+      }
+      
+      &:active:hover {
+        border-image: url(img/button-down.png) 35 fill;
+      }
+    }
+  }
+
+  button.link {
+    color: $white;
+    font-size: 12px;
+    display: block;
+    margin: 5px auto 0 auto;
+  }
+}

@@ -1,0 +1,32 @@
+.LauncherControls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $launcher-controls-height;
+  border: 5px solid $dark-green;
+  background-color: $light-green;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p.status {
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    color: $white;
+    background-color: $dark-bg;
+    font-size: 12px;
+    width: 400px;
+    border: 2px solid $dark-green;
+    border-radius: 2px;
+    overflow: auto;
+  }
+
+  div.accessCodes {
+    a {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+}

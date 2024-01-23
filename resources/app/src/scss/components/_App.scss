@@ -1,0 +1,122 @@
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.computer-inner {
+  z-index: -1;
+}
+
+.computer-inner .tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 96px;
+  width: 96px;
+  background-image: url(./img/computer_bg_tl.png);
+}
+
+.computer-inner .tm {
+  position: absolute;
+  top: 0;
+  left: 96px;
+  height: 96px;
+  right: 96px;
+  background-image: url(./img/computer_bg_tm.png);
+  -webkit-app-region: drag;
+}
+
+.computer-inner .tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 96px;
+  width: 96px;
+  background-image: url(./img/computer_bg_tr.png);
+}
+
+.computer-inner .botl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 96px;
+  width: 96px;
+  background-image: url(./img/computer_bg_bl.png);
+}
+
+.computer-inner .bm {
+  position: absolute;
+  bottom: 0;
+  left: 96px;
+  height: 96px;
+  right: 96px;
+  background-image: url(./img/computer_bg_bm.png);
+  -webkit-app-region: drag;
+}
+
+.computer-inner .botr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 96px;
+  width: 96px;
+  background-image: url(./img/computer_bg_br.png);
+}
+
+.computer-inner .l {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 64px;
+  bottom: 96px;
+  background-image: url(./img/computer_bg_l.png);
+  -webkit-app-region: drag;
+}
+
+.computer-inner .r {
+  position: absolute;
+  top: 96px;
+  right: 0;
+  width: 64px;
+  bottom: 96px;
+  background-image: url(./img/computer_bg_r.png);
+  -webkit-app-region: drag;
+}
+
+.computer-inner .close {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 5px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+}
+
+.computer-bg {
+  position: absolute;
+  top: 92px;
+  bottom: 32px;
+  right: 60px;
+  left: 38px;
+  background-color: #222;
+  border: 4px solid #000;
+}
+
+.computer-bg h2.window-title {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  top: -72px;
+  left: 32px;
+  color: #eee;
+  -webkit-app-region: drag;
+  cursor: default;
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
+$base-font-stack: "Roboto Mono", Monaco, Consolas, monospace;
+$game-font-stack: "Press Start 2P", monospace;

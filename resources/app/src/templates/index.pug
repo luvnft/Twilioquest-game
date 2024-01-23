@@ -1,0 +1,26 @@
+doctype html
+head
+  title TwilioQuest Launcher
+  meta(
+    http-equiv="Content-Security-Policy" 
+    content=`
+      default-src 'self';
+      connect-src https://*.googleapis.com/
+                  https://twilioquest-dev.firebaseapp.com/
+                  https://twilioquest-prod.firebaseapp.com/
+                  http://localhost:5000/;
+      frame-src https://twilioquest-dev.firebaseapp.com/
+                https://twilioquest-prod.firebaseapp.com/
+                http://localhost:5000/;
+    `
+  )
+  link(rel="stylesheet" type="text/css" href="index.css")
+body
+  #app
+
+  script(src='lib/react.development.js')
+  script(src='lib/react-dom.development.js')
+  script(src='lib/firebase-app.js')
+  script(src='lib/firebase-firestore.js')
+  script(src='lib/firebase-storage.js')
+  script(src='index.js')
