@@ -11,7 +11,7 @@ and will live on in a new home as TerminalQuest.
 # To execute the game:
 At Terminal type
 ```
-cd twilioquest
+cd Twilioquest-game/
 chmod +x twilioquest
 ./twilioquest
 ```
